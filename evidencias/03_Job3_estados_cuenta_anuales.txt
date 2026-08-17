@@ -1,0 +1,96 @@
+﻿
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.3)
+
+2026-08-17T17:51:44.683-04:00  INFO 40556 --- [bank-batch] [           main] c.duoc.bank.batch.BankBatchApplication   : Starting BankBatchApplication v0.0.1-SNAPSHOT using Java 21.0.12 with PID 40556 (C:\Users\fparraa\Documents\ESTUDIO\PBY2203 BACKEND 3\S1_Formativa1\bank-batch\target\bank-batch-0.0.1-SNAPSHOT.jar started by fparraa in C:\Users\fparraa\Documents\ESTUDIO\PBY2203 BACKEND 3\S1_Formativa1\bank-batch)
+2026-08-17T17:51:44.689-04:00 DEBUG 40556 --- [bank-batch] [           main] c.duoc.bank.batch.BankBatchApplication   : Running with Spring Boot v3.5.3, Spring v6.2.8
+2026-08-17T17:51:44.689-04:00  INFO 40556 --- [bank-batch] [           main] c.duoc.bank.batch.BankBatchApplication   : The following 1 profile is active: "oracle"
+2026-08-17T17:51:48.099-04:00  INFO 40556 --- [bank-batch] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-17T17:51:48.612-04:00  INFO 40556 --- [bank-batch] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 431 ms. Found 5 JPA repository interfaces.
+2026-08-17T17:51:51.469-04:00  INFO 40556 --- [bank-batch] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-17T17:52:07.832-04:00  INFO 40556 --- [bank-batch] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@24a86066
+2026-08-17T17:52:07.839-04:00  INFO 40556 --- [bank-batch] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-17T17:52:08.996-04:00  INFO 40556 --- [bank-batch] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-17T17:52:09.898-04:00  INFO 40556 --- [bank-batch] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2026-08-17T17:52:10.366-04:00  INFO 40556 --- [bank-batch] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-17T17:52:14.209-04:00  INFO 40556 --- [bank-batch] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-17T17:52:17.405-04:00  INFO 40556 --- [bank-batch] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 19.32
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-17T17:52:26.513-04:00  INFO 40556 --- [bank-batch] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-17T17:52:28.430-04:00  INFO 40556 --- [bank-batch] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-17T17:52:32.744-04:00  INFO 40556 --- [bank-batch] [           main] c.duoc.bank.batch.BankBatchApplication   : Started BankBatchApplication in 50.508 seconds (process running for 52.425)
+2026-08-17T17:52:32.764-04:00  INFO 40556 --- [bank-batch] [           main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2026-08-17T17:52:33.259-04:00  INFO 40556 --- [bank-batch] [           main] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=anualesJob]] launched with the following parameters: [{'run.id':'{value=2, type=class java.lang.Long, identifying=true}'}]
+2026-08-17T17:52:33.423-04:00  INFO 40556 --- [bank-batch] [           main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [limpiarAnualesStep]
+2026-08-17T17:52:33.454-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    : >>> Inicia Step 'limpiarAnualesStep' (job 'anualesJob')
+2026-08-17T17:52:36.330-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.anuales.LimpiarAnualesTasklet    : Limpieza previa: se eliminaron 9 movimientos y 8 estados de cuenta de la corrida anterior
+2026-08-17T17:52:36.362-04:00  INFO 40556 --- [bank-batch] [           main] o.s.batch.core.step.AbstractStep         : Step: [limpiarAnualesStep] executed in 2s939ms
+2026-08-17T17:52:36.362-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    : =================================================================
+2026-08-17T17:52:36.362-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :  RESUMEN Step 'limpiarAnualesStep' -> COMPLETED
+2026-08-17T17:52:36.363-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    leidos               : 0
+2026-08-17T17:52:36.363-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    filtrados (negocio)  : 0
+2026-08-17T17:52:36.363-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    escritos             : 0
+2026-08-17T17:52:36.363-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    saltados (total)     : 0
+2026-08-17T17:52:36.363-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :      - en lectura       : 0
+2026-08-17T17:52:36.363-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :      - en procesamiento : 0
+2026-08-17T17:52:36.363-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :      - en escritura     : 0
+2026-08-17T17:52:36.363-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    commits / rollbacks  : 1 / 0
+2026-08-17T17:52:36.363-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    : =================================================================
+2026-08-17T17:52:36.457-04:00  INFO 40556 --- [bank-batch] [           main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [leerMovimientosAnualesStep]
+2026-08-17T17:52:36.478-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    : >>> Inicia Step 'leerMovimientosAnualesStep' (job 'anualesJob')
+2026-08-17T17:52:37.028-04:00  WARN 40556 --- [bank-batch] [           main] c.d.b.b.a.MovimientoAnualProcessor       : [OBSERVACION] cuenta 107 2024-12-25 deposito -> movimiento de monto cero, sin efecto en el saldo
+2026-08-17T17:52:37.110-04:00  INFO 40556 --- [bank-batch] [           main] o.s.batch.core.step.AbstractStep         : Step: [leerMovimientosAnualesStep] executed in 652ms
+2026-08-17T17:52:37.110-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    : =================================================================
+2026-08-17T17:52:37.110-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :  RESUMEN Step 'leerMovimientosAnualesStep' -> COMPLETED
+2026-08-17T17:52:37.110-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    leidos               : 9
+2026-08-17T17:52:37.110-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    filtrados (negocio)  : 0
+2026-08-17T17:52:37.110-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    escritos             : 9
+2026-08-17T17:52:37.110-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    saltados (total)     : 0
+2026-08-17T17:52:37.110-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :      - en lectura       : 0
+2026-08-17T17:52:37.110-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :      - en procesamiento : 0
+2026-08-17T17:52:37.111-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :      - en escritura     : 0
+2026-08-17T17:52:37.111-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    commits / rollbacks  : 2 / 0
+2026-08-17T17:52:37.111-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    : =================================================================
+2026-08-17T17:52:37.199-04:00  INFO 40556 --- [bank-batch] [           main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [estadoCuentaAnualStep]
+2026-08-17T17:52:37.221-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    : >>> Inicia Step 'estadoCuentaAnualStep' (job 'anualesJob')
+2026-08-17T17:52:37.376-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : Compilando estados de cuenta anuales sobre 9 movimientos
+2026-08-17T17:52:37.498-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : Informe escrito en C:\Users\fparraa\Documents\ESTUDIO\PBY2203 BACKEND 3\S1_Formativa1\bank-batch\reportes\estados_cuenta_anuales.txt
+2026-08-17T17:52:37.498-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : ---------------- ESTADOS DE CUENTA ANUALES ----------------
+2026-08-17T17:52:37.498-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : cuenta 101 (2024) | depositos=1000 | retiros=-500 | compras=0 | neto=500 | movs=2 | en cero=0
+2026-08-17T17:52:37.498-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : cuenta 102 (2024) | depositos=1500 | retiros=0 | compras=0 | neto=1500 | movs=1 | en cero=0
+2026-08-17T17:52:37.498-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : cuenta 103 (2024) | depositos=2000 | retiros=0 | compras=0 | neto=2000 | movs=1 | en cero=0
+2026-08-17T17:52:37.498-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : cuenta 104 (2024) | depositos=0 | retiros=0 | compras=-100 | neto=-100 | movs=1 | en cero=0
+2026-08-17T17:52:37.498-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : cuenta 105 (2024) | depositos=2500 | retiros=0 | compras=0 | neto=2500 | movs=1 | en cero=0
+2026-08-17T17:52:37.499-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : cuenta 106 (2024) | depositos=3000 | retiros=0 | compras=0 | neto=3000 | movs=1 | en cero=0
+2026-08-17T17:52:37.499-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : cuenta 107 (2024) | depositos=0 | retiros=0 | compras=0 | neto=0 | movs=1 | en cero=1
+2026-08-17T17:52:37.499-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : cuenta 108 (2024) | depositos=2000 | retiros=0 | compras=0 | neto=2000 | movs=1 | en cero=0
+2026-08-17T17:52:37.499-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : Se escribieron 8 estados de cuenta
+2026-08-17T17:52:37.499-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.b.a.EstadoCuentaAnualTasklet       : ----------------------------------------------------------
+2026-08-17T17:52:37.526-04:00  INFO 40556 --- [bank-batch] [           main] o.s.batch.core.step.AbstractStep         : Step: [estadoCuentaAnualStep] executed in 326ms
+2026-08-17T17:52:37.526-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    : =================================================================
+2026-08-17T17:52:37.527-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :  RESUMEN Step 'estadoCuentaAnualStep' -> COMPLETED
+2026-08-17T17:52:37.527-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    leidos               : 0
+2026-08-17T17:52:37.527-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    filtrados (negocio)  : 0
+2026-08-17T17:52:37.527-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    escritos             : 8
+2026-08-17T17:52:37.527-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    saltados (total)     : 0
+2026-08-17T17:52:37.527-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :      - en lectura       : 0
+2026-08-17T17:52:37.527-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :      - en procesamiento : 0
+2026-08-17T17:52:37.527-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :      - en escritura     : 0
+2026-08-17T17:52:37.527-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    commits / rollbacks  : 1 / 0
+2026-08-17T17:52:37.527-04:00  INFO 40556 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    : =================================================================
+2026-08-17T17:52:37.607-04:00  INFO 40556 --- [bank-batch] [           main] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=anualesJob]] completed with the following parameters: [{'run.id':'{value=2, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 4s258ms
+2026-08-17T17:52:37.612-04:00  INFO 40556 --- [bank-batch] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-17T17:52:37.621-04:00  INFO 40556 --- [bank-batch] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-17T17:52:37.659-04:00  INFO 40556 --- [bank-batch] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

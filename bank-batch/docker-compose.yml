@@ -1,0 +1,24 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: bank-batch-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: bankbatch
+      POSTGRES_USER: bankbatch
+      POSTGRES_PASSWORD: bankbatch
+      # Necesario para que las tablas de metadata de Spring Batch
+      # y las descripciones de los CSV soporten acentos.
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8 --locale=C"
+    ports:
+      - "5432:5432"
+    volumes:
+      - bank-batch-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bankbatch -d bankbatch"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  bank-batch-pgdata:

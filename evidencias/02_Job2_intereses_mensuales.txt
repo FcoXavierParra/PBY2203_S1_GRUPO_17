@@ -1,0 +1,69 @@
+﻿
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.3)
+
+2026-08-17T17:51:00.528-04:00  INFO 20924 --- [bank-batch] [           main] c.duoc.bank.batch.BankBatchApplication   : Starting BankBatchApplication v0.0.1-SNAPSHOT using Java 21.0.12 with PID 20924 (C:\Users\fparraa\Documents\ESTUDIO\PBY2203 BACKEND 3\S1_Formativa1\bank-batch\target\bank-batch-0.0.1-SNAPSHOT.jar started by fparraa in C:\Users\fparraa\Documents\ESTUDIO\PBY2203 BACKEND 3\S1_Formativa1\bank-batch)
+2026-08-17T17:51:00.533-04:00 DEBUG 20924 --- [bank-batch] [           main] c.duoc.bank.batch.BankBatchApplication   : Running with Spring Boot v3.5.3, Spring v6.2.8
+2026-08-17T17:51:00.534-04:00  INFO 20924 --- [bank-batch] [           main] c.duoc.bank.batch.BankBatchApplication   : The following 1 profile is active: "oracle"
+2026-08-17T17:51:03.896-04:00  INFO 20924 --- [bank-batch] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-08-17T17:51:04.418-04:00  INFO 20924 --- [bank-batch] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 438 ms. Found 5 JPA repository interfaces.
+2026-08-17T17:51:07.260-04:00  INFO 20924 --- [bank-batch] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-08-17T17:51:13.564-04:00  INFO 20924 --- [bank-batch] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection oracle.jdbc.driver.T4CConnection@54402c04
+2026-08-17T17:51:13.571-04:00  INFO 20924 --- [bank-batch] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-08-17T17:51:14.711-04:00  INFO 20924 --- [bank-batch] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-08-17T17:51:15.612-04:00  INFO 20924 --- [bank-batch] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.18.Final
+2026-08-17T17:51:16.066-04:00  INFO 20924 --- [bank-batch] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-08-17T17:51:19.899-04:00  INFO 20924 --- [bank-batch] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-08-17T17:51:23.404-04:00  INFO 20924 --- [bank-batch] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 19.32
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-08-17T17:51:32.115-04:00  INFO 20924 --- [bank-batch] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-08-17T17:51:34.750-04:00  INFO 20924 --- [bank-batch] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-08-17T17:51:38.609-04:00  INFO 20924 --- [bank-batch] [           main] c.duoc.bank.batch.BankBatchApplication   : Started BankBatchApplication in 40.535 seconds (process running for 42.492)
+2026-08-17T17:51:38.632-04:00  INFO 20924 --- [bank-batch] [           main] o.s.b.a.b.JobLauncherApplicationRunner   : Running default command line with: []
+2026-08-17T17:51:39.101-04:00  INFO 20924 --- [bank-batch] [           main] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=interesesJob]] launched with the following parameters: [{'run.id':'{value=2, type=class java.lang.Long, identifying=true}'}]
+2026-08-17T17:51:39.273-04:00  INFO 20924 --- [bank-batch] [           main] o.s.batch.core.job.SimpleStepHandler     : Executing step: [calcularInteresesStep]
+2026-08-17T17:51:39.305-04:00  INFO 20924 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    : >>> Inicia Step 'calcularInteresesStep' (job 'interesesJob')
+2026-08-17T17:51:39.383-04:00 DEBUG 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : cuenta 101 (ahorro) saldo 5000.00 x tasa 0.005 = interes 25.00 -> saldo final 5025.00
+2026-08-17T17:51:39.384-04:00 DEBUG 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : cuenta 102 (prestamo) saldo 8000.00 x tasa 0.015 = interes 120.00 -> saldo final 8120.00
+2026-08-17T17:51:39.384-04:00 DEBUG 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : cuenta 103 (prestamo) saldo 12000.00 x tasa 0.015 = interes 180.00 -> saldo final 12180.00
+2026-08-17T17:51:39.384-04:00  WARN 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : [OBSERVACION] cuenta 104 -> saldo inicial en cero, interes 0
+2026-08-17T17:51:39.385-04:00 DEBUG 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : cuenta 104 (ahorro) saldo 0.00 x tasa 0.005 = interes 0.00 -> saldo final 0.00
+2026-08-17T17:51:39.398-04:00 DEBUG 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : cuenta 101 (ahorro) saldo 5000.00 x tasa 0.005 = interes 25.00 -> saldo final 5025.00
+2026-08-17T17:51:39.398-04:00 DEBUG 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : cuenta 102 (prestamo) saldo 8000.00 x tasa 0.015 = interes 120.00 -> saldo final 8120.00
+2026-08-17T17:51:39.398-04:00 DEBUG 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : cuenta 103 (prestamo) saldo 12000.00 x tasa 0.015 = interes 180.00 -> saldo final 12180.00
+2026-08-17T17:51:39.398-04:00  WARN 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : [OBSERVACION] cuenta 104 -> saldo inicial en cero, interes 0
+2026-08-17T17:51:39.398-04:00 DEBUG 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : cuenta 104 (ahorro) saldo 0.00 x tasa 0.005 = interes 0.00 -> saldo final 0.00
+2026-08-17T17:51:39.993-04:00  WARN 20924 --- [bank-batch] [           main] c.d.b.batch.common.LoggingSkipListener   : [SKIP-PROCESO] registro=CuentaCsv(cuentaId=105, nombre=Charlie Green, saldo=7000, edad=35, tipo=hipoteca) | motivo=RegistroInvalidoException: tipo mal clasificado 'hipoteca' en la cuenta 105 (esperado: ahorro o prestamo). No se calcula interes.
+2026-08-17T17:51:40.023-04:00  WARN 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : [OBSERVACION] cuenta 106 -> posible duplicado de la cuenta 101 (John Doe|5000.00|30|ahorro)
+2026-08-17T17:51:40.024-04:00 DEBUG 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : cuenta 106 (ahorro) saldo 5000.00 x tasa 0.005 = interes 25.00 -> saldo final 5025.00
+2026-08-17T17:51:40.024-04:00 DEBUG 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : cuenta 107 (prestamo) saldo 15000.00 x tasa 0.015 = interes 225.00 -> saldo final 15225.00
+2026-08-17T17:51:40.024-04:00  WARN 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : [OBSERVACION] cuenta 108 -> edad 80 alcanza el limite de revision (80)
+2026-08-17T17:51:40.024-04:00 DEBUG 20924 --- [bank-batch] [           main] c.d.b.batch.intereses.InteresProcessor   : cuenta 108 (ahorro) saldo 10000.00 x tasa 0.005 = interes 50.00 -> saldo final 10050.00
+2026-08-17T17:51:40.079-04:00  INFO 20924 --- [bank-batch] [           main] o.s.batch.core.step.AbstractStep         : Step: [calcularInteresesStep] executed in 803ms
+2026-08-17T17:51:40.079-04:00  INFO 20924 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    : =================================================================
+2026-08-17T17:51:40.079-04:00  INFO 20924 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :  RESUMEN Step 'calcularInteresesStep' -> COMPLETED
+2026-08-17T17:51:40.079-04:00  INFO 20924 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    leidos               : 8
+2026-08-17T17:51:40.079-04:00  INFO 20924 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    filtrados (negocio)  : 0
+2026-08-17T17:51:40.079-04:00  INFO 20924 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    escritos             : 7
+2026-08-17T17:51:40.079-04:00  INFO 20924 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    saltados (total)     : 1
+2026-08-17T17:51:40.079-04:00  INFO 20924 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :      - en lectura       : 0
+2026-08-17T17:51:40.079-04:00  INFO 20924 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :      - en procesamiento : 1
+2026-08-17T17:51:40.079-04:00  INFO 20924 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :      - en escritura     : 0
+2026-08-17T17:51:40.079-04:00  INFO 20924 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    :    commits / rollbacks  : 2 / 1
+2026-08-17T17:51:40.080-04:00  INFO 20924 --- [bank-batch] [           main] c.d.b.batch.common.ConteoStepListener    : =================================================================
+2026-08-17T17:51:40.155-04:00  INFO 20924 --- [bank-batch] [           main] o.s.b.c.l.s.TaskExecutorJobLauncher      : Job: [SimpleJob: [name=interesesJob]] completed with the following parameters: [{'run.id':'{value=2, type=class java.lang.Long, identifying=true}'}] and the following status: [COMPLETED] in 960ms
+2026-08-17T17:51:40.161-04:00  INFO 20924 --- [bank-batch] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-08-17T17:51:40.170-04:00  INFO 20924 --- [bank-batch] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-08-17T17:51:40.204-04:00  INFO 20924 --- [bank-batch] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

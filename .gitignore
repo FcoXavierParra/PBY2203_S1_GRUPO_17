@@ -1,0 +1,76 @@
+# ---------------------------------------------------------------------------
+# Material del curso
+# ---------------------------------------------------------------------------
+# Las guias, instrucciones y pautas .docx son material de Duoc UC y su aviso de
+# derechos prohibe expresamente reproducirlas o publicarlas. No van al repo.
+*.docx
+*.pdf
+
+# ---------------------------------------------------------------------------
+# Notas de trabajo internas
+# ---------------------------------------------------------------------------
+# Utiles para desarrollar, pero no son parte de la entrega ni le sirven a quien
+# clone el repo. Contienen rutas locales de la maquina y notas de proceso.
+# El README.md de la raiz si se publica: es el entregable de documentacion.
+/CLAUDE.md
+/ESTADO_Y_PROXIMOS_PASOS.md
+/EVIDENCIAS.md
+
+# ---------------------------------------------------------------------------
+# CREDENCIALES - nunca deben salir del equipo
+# ---------------------------------------------------------------------------
+# El wallet de Oracle Autonomous Database contiene las llaves de conexion.
+# Publicarlo equivale a publicar la contrasena de la base.
+wallet/
+Wallet_*/
+*wallet*.zip
+cwallet.sso
+ewallet.p12
+tnsnames.ora
+sqlnet.ora
+ojdbc.properties
+keystore.jks
+truststore.jks
+
+# Cualquier properties local con credenciales reales
+application-local.properties
+*-secrets.properties
+.env
+
+# ---------------------------------------------------------------------------
+# Paquete de entrega
+# ---------------------------------------------------------------------------
+# El ZIP se sube a AVA, no al repositorio: duplicaria todo el contenido.
+Exp1_S1_Grupo17/
+Exp1_S1_Grupo17.zip
+
+# ---------------------------------------------------------------------------
+# Build
+# ---------------------------------------------------------------------------
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# ---------------------------------------------------------------------------
+# IDE
+# ---------------------------------------------------------------------------
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.classpath
+.project
+.settings/
+bin/
+
+# ---------------------------------------------------------------------------
+# SO
+# ---------------------------------------------------------------------------
+Thumbs.db
+.DS_Store
+
+# ---------------------------------------------------------------------------
+# Salidas generadas por los Jobs
+# ---------------------------------------------------------------------------
+out/
+*.log
